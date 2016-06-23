@@ -1,0 +1,11 @@
+Package: hailueIO
+Type: Package
+Title: Most used stuff for in-house Krew
+Version: 0.1.0
+Author: Junyi Zhao
+Maintainer: Who to complain to <zhaojunyi@unicdata.com>
+Description: IO & encoding functions with MySQL, Mongodb
+Depends: R (>= 3.2.2)
+Imports: data.table, RMySQL, jsonlite, rjson, rmongodb
+License: GPL
+LazyData: TRUE
