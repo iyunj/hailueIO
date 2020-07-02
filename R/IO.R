@@ -1,7 +1,7 @@
 getfromSQL<-function(mydbname,mytablename){
   library(data.table)
   library(RMySQL)
-  mydb = dbConnect(MySQL(), user='root', password='919191', host='192.168.8.190', dbname = mydbname)
+  mydb = dbConnect(MySQL(), user='root', password='notapassword', host='192.168.8.190', dbname = mydbname)
   dbGetQuery(mydb, "SET NAMES utf8")
   importTable <- data.table(dbReadTable(mydb, mytablename))
   dbDisconnect(mydb)
@@ -11,7 +11,7 @@ getfromSQL<-function(mydbname,mytablename){
 savetoSQL<-function(mydbname,mytablename,mytable){
   library(data.table)
   library(RMySQL)
-  mydb = dbConnect(MySQL(), user='root', password='919191', host='192.168.8.190', dbname = mydbname)
+  mydb = dbConnect(MySQL(), user='root', password='notapassword', host='192.168.8.190', dbname = mydbname)
   #dbListTables(mydb)
   dbWriteTable(mydb, mytablename, mytable,overwrite = TRUE)
   cat(" Data colums:","\n  ",dbListFields(mydb, mytablename),"\n Success:")
